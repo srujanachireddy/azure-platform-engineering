@@ -23,6 +23,13 @@ Everything in this repository is built from scratch and documented with the goal
 ```text
 azure-platform-engineering/
 ├── docs/
+01-project-overview.md
+02-design-decisions.md
+03-networking-notes.md
+04-security-notes.md
+05-monitoring-notes.md
+06-terraform-notes.md
+
 ├── diagrams/
 ├── environments/
 ├── modules/
