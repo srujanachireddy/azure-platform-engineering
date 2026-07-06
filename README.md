@@ -1,8 +1,10 @@
 # Azure Platform Engineering
 
-This repository demonstrates a production-style Azure platform built using Terraform and Infrastructure as Code principles.
+Over the last few years, I've worked with Azure, Terraform, Kubernetes, Azure DevOps, and cloud infrastructure automation. While most of that work has been in enterprise environments, I wanted to build a public project that reflects how I personally like to organize and manage Azure infrastructure.
 
-The goal is to show how Azure infrastructure can be organized into reusable modules and environment-specific configurations for DevOps and platform engineering teams.
+This repository is my approach to building a reusable Azure platform using Infrastructure as Code. It focuses on modular Terraform design, environment separation, security, networking, monitoring, and Kubernetes, while keeping the implementation simple enough to understand and extend.
+
+Everything in this repository is built from scratch and documented with the goal of explaining not only *what* is being built, but also *why* each design decision was made.
 
 ## What This Project Covers
 
