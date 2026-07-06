@@ -1,33 +1,29 @@
-# azure-platform-engineering
+# Azure Platform Engineering
 
-This repository contains a production-style Azure platform built with Terraform. It is designed to provision reusable cloud infrastructure components such as networking, AKS, ACR, Key Vault, Storage, and monitoring services.
+This repository demonstrates a production-style Azure platform built using Terraform and Infrastructure as Code principles.
+
+The goal is to show how Azure infrastructure can be organized into reusable modules and environment-specific configurations for DevOps and platform engineering teams.
 
 ## What This Project Covers
 
 - Azure Resource Groups
 - Virtual Networks and Subnets
 - Network Security Groups
-- Azure Kubernetes Service (AKS)
-- Azure Container Registry (ACR)
+- Azure Storage
 - Azure Key Vault
-- Azure Storage Account
+- Azure Container Registry
+- Azure Kubernetes Service
 - Log Analytics and Azure Monitor
-- Environment-based Terraform structure for dev, qa, and prod
-
-## Goal
-
-The goal of this project is to demonstrate how Azure infrastructure can be organized using reusable Terraform modules and environment-specific configurations.
-
-This structure is similar to how cloud infrastructure is managed in enterprise DevOps and platform engineering teams.
+- CI/CD validation workflow
 
 ## Repository Structure
 
 ```text
 azure-platform-engineering/
-├── modules/
-├── environments/
-├── scripts/
-├── diagrams/
 ├── docs/
+├── diagrams/
+├── environments/
+├── modules/
+├── scripts/
 ├── README.md
-└── .gitignore
+└── LICENSE
