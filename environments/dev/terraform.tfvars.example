@@ -1,0 +1,8 @@
+resource_group_name = "rg-azure-platform-dev"
+location            = "East US"
+
+tags = {
+  environment = "dev"
+  project     = "azure-platform-engineering"
+  managed_by  = "terraform"
+}
