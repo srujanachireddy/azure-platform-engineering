@@ -10,8 +10,17 @@ tags = {
 vnet_name     = "vnet-azure-platform-dev"
 address_space = ["10.0.0.0/16"]
 
+aks_subnet_name                = "snet-aks-dev"
 aks_subnet_prefix              = "10.0.1.0/24"
+
+app_subnet_name                = "snet-app-dev"
 app_subnet_prefix              = "10.0.2.0/24"
+
+private_endpoint_subnet_name   = "snet-private-endpoints-dev"
 private_endpoint_subnet_prefix = "10.0.3.0/24"
+
+aks_nsg_name                   = "nsg-aks-dev"
+app_nsg_name                   = "nsg-app-dev"
+private_endpoint_nsg_name      = "nsg-private-endpoints-dev"
 
 

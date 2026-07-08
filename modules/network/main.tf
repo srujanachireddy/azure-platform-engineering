@@ -7,35 +7,42 @@ resource "azurerm_virtual_network" "this" {
 }
 
 resource "azurerm_subnet" "aks" {
-  name                 = "snet-aks"
+  name                 = var.aks_subnet_name
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.this.name
   address_prefixes     = [var.aks_subnet_prefix]
 }
 
 resource "azurerm_subnet" "app" {
-  name                 = "snet-app"
+  name                 = var.app_subnet_name
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.this.name
   address_prefixes     = [var.app_subnet_prefix]
 }
 
 resource "azurerm_subnet" "private_endpoints" {
-  name                 = "snet-private-endpoints"
+  name                 = var.private_endpoint_subnet_name
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.this.name
   address_prefixes     = [var.private_endpoint_subnet_prefix]
 }
 
 resource "azurerm_network_security_group" "aks" {
-  name                = "${var.vnet_name}-aks-nsg"
+  name                = var.aks_nsg_name
   location            = var.location
   resource_group_name = var.resource_group_name
   tags                = var.tags
 }
 
 resource "azurerm_network_security_group" "app" {
-  name                = "${var.vnet_name}-app-nsg"
+  name                = var.app_nsg_name
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  tags                = var.tags
+}
+
+resource "azurerm_network_security_group" "private_endpoints" {
+  name                = var.private_endpoint_nsg_name
   location            = var.location
   resource_group_name = var.resource_group_name
   tags                = var.tags
@@ -49,4 +56,9 @@ resource "azurerm_subnet_network_security_group_association" "aks" {
 resource "azurerm_subnet_network_security_group_association" "app" {
   subnet_id                 = azurerm_subnet.app.id
   network_security_group_id = azurerm_network_security_group.app.id
+}
+
+resource "azurerm_subnet_network_security_group_association" "private_endpoints" {
+  subnet_id                 = azurerm_subnet.private_endpoints.id
+  network_security_group_id = azurerm_network_security_group.private_endpoints.id
 }
