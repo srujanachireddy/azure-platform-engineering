@@ -13,3 +13,28 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "vnet_name" {
+  type        = string
+  description = "Name of the dev virtual network."
+}
+
+variable "address_space" {
+  type        = list(string)
+  description = "Address space for the dev virtual network."
+}
+
+variable "aks_subnet_prefix" {
+  description = "Address prefix for the AKS subnet."
+  type        = string
+}
+
+variable "app_subnet_prefix" {
+  description = "Address prefix for the application subnet."
+  type        = string
+}
+
+variable "private_endpoint_subnet_prefix" {
+  description = "Address prefix for the private endpoint subnet."
+  type        = string
+}
