@@ -27,3 +27,12 @@ module "network" {
 
   tags = var.tags
 }
+
+module "storage" {
+  source = "../../modules/storage"
+
+  storage_account_name = var.storage_account_name
+  resource_group_name  = module.resource_group.name
+  location             = var.location
+  tags                 = var.tags
+}

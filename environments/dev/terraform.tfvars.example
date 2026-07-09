@@ -23,4 +23,6 @@ aks_nsg_name                   = "nsg-aks-dev"
 app_nsg_name                   = "nsg-app-dev"
 private_endpoint_nsg_name      = "nsg-private-endpoints-dev"
 
+storage_account_name = "stsrujanaplatformdev01"
+
 

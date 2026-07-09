@@ -32,3 +32,18 @@ output "private_endpoint_subnet_id" {
   description = "ID of the dev private endpoint subnet."
   value       = module.network.private_endpoint_subnet_id
 }
+
+output "storage_account_name" {
+  description = "Name of the dev Storage Account."
+  value       = module.storage.storage_account_name
+}
+
+output "storage_account_id" {
+  description = "ID of the dev Storage Account."
+  value       = module.storage.storage_account_id
+}
+
+output "storage_primary_blob_endpoint" {
+  description = "Primary Blob endpoint of the dev Storage Account."
+  value       = module.storage.primary_blob_endpoint
+}

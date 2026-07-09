@@ -68,3 +68,8 @@ variable "private_endpoint_nsg_name" {
   description = "Name of the dev private endpoint Network Security Group."
   type        = string
 }
+
+variable "storage_account_name" {
+  description = "Name of the dev Storage Account."
+  type        = string
+}
