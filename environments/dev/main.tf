@@ -36,3 +36,12 @@ module "storage" {
   location             = var.location
   tags                 = var.tags
 }
+
+module "keyvault" {
+  source = "../../modules/keyvault"
+
+  key_vault_name     = var.key_vault_name
+  resource_group_name = module.resource_group.name
+  location           = var.location
+  tags               = var.tags
+}

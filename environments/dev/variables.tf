@@ -73,3 +73,8 @@ variable "storage_account_name" {
   description = "Name of the dev Storage Account."
   type        = string
 }
+
+variable "key_vault_name" {
+  description = "Name of the dev Key Vault."
+  type        = string
+}

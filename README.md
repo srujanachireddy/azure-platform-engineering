@@ -11,9 +11,9 @@ This project gives me a place to demonstrate the same engineering principles usi
 ## Project Roadmap
 
 - [x] Repository foundation
-- [ ] Resource Group module
-- [ ] Networking module
-- [ ] Storage module
+- [x] Resource Group module
+- [x] Networking module
+- [x] Storage module
 - [ ] Azure Key Vault
 - [ ] Azure Container Registry
 - [ ] Azure Kubernetes Service

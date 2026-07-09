@@ -3,6 +3,8 @@ resource "azurerm_storage_account" "this" {
   resource_group_name      = var.resource_group_name
   location                 = var.location
 
+# intentionally used Standard_LRS to keep the project cost-conscious while demonstrating a production-style module.
+
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
