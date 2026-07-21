@@ -78,3 +78,20 @@ variable "key_vault_name" {
   description = "Name of the dev Key Vault."
   type        = string
 }
+
+variable "log_analytics_workspace_name" {
+  description = "Name of the Log Analytics Workspace for the dev environment."
+  type        = string
+}
+
+variable "log_analytics_sku" {
+  description = "Pricing SKU for the dev Log Analytics Workspace."
+  type        = string
+  default     = "PerGB2018"
+}
+
+variable "log_retention_in_days" {
+  description = "Number of days that logs are retained in the dev workspace."
+  type        = number
+  default     = 30
+}

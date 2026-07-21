@@ -62,3 +62,18 @@ output "key_vault_uri" {
   description = "URI of the dev Key Vault."
   value       = module.keyvault.key_vault_uri
 }
+
+output "log_analytics_workspace_id" {
+  description = "Azure resource ID of the dev Log Analytics Workspace."
+  value       = module.monitor.log_analytics_workspace_id
+}
+
+output "log_analytics_workspace_name" {
+  description = "Name of the dev Log Analytics Workspace."
+  value       = module.monitor.log_analytics_workspace_name
+}
+
+output "log_analytics_workspace_workspace_id" {
+  description = "Workspace identifier of the dev Log Analytics Workspace."
+  value       = module.monitor.log_analytics_workspace_workspace_id
+}

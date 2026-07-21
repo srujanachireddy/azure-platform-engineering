@@ -27,4 +27,7 @@ storage_account_name = "stsrujanaplatformdev01"
 
 key_vault_name = "kv-srujana-platform-dev"
 
+log_analytics_workspace_name = "log-azure-platform-dev"
+log_analytics_sku            = "PerGB2018"
+log_retention_in_days        = 30
 

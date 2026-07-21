@@ -45,3 +45,14 @@ module "keyvault" {
   location           = var.location
   tags               = var.tags
 }
+
+module "monitor" {
+  source = "../../modules/monitor"
+
+  resource_group_name          = module.resource_group.resource_group_name
+  location                     = var.location
+  log_analytics_workspace_name = var.log_analytics_workspace_name
+  sku                          = var.log_analytics_sku
+  retention_in_days            = var.log_retention_in_days
+  tags                         = var.tags
+}
